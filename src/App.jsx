@@ -15,6 +15,7 @@ import UserList from "./pages/users/UserList";
 import UserForm from "./pages/users/UserForm";
 import RoleList from "./pages/roles/RoleList";
 import RoleForm from "./pages/roles/RoleForm";
+import UserMetricsPage from "./pages/usermetrics/UserMetricsPage";
 
 export default function App() {
   return (
@@ -44,6 +45,7 @@ export default function App() {
             <Route path="roles" element={<RoleList />} />
             <Route path="roles/new" element={<RoleForm />} />
             <Route path="roles/edit/:id" element={<RoleForm />} />
+            <Route path="user-metrics" element={<UserMetricsPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

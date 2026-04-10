@@ -32,7 +32,9 @@ const EMPTY = {
   email: "",
   phone: "",
   password: "",
+  deleted: false,
   roleIds: [],
+  amountInvested: "",
 };
 
 function UserForm() {
@@ -64,6 +66,7 @@ function UserForm() {
             phone: d.phone || "",
             password: "", // never pre-fill password
             roleIds: d.roles?.map((r) => r.id) || [],
+            amountInvested: d.amountInvested || "",
           });
         })
         .catch((e) => toast.error(e.message));
@@ -190,6 +193,22 @@ function UserForm() {
                   name="phone"
                   value={form.phone}
                   onChange={handleChange}
+                />
+              </Grid>
+
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  label="Amount Invested"
+                  name="amountInvested"
+                  type="number"
+                  value={form.amountInvested}
+                  onChange={handleChange}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">₹</InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>

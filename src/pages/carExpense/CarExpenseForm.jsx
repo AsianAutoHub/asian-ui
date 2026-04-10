@@ -40,9 +40,13 @@ export default function CarExpenseForm() {
 
   useEffect(() => {
     api
-      .get("/user/get-all")
-      .then((r) => setUsers(r.data.data || []))
-      .catch(() => {});
+      .get("/user/get-all", { params: { page: 0, size: 100 } })
+      .then((r) => setUsers(r.data.data.content || []))
+      .catch((e) => toast.error(e.message));
+    // api
+    //   .get("/user/get-all")
+    //   .then((r) => setUsers(r.data.data || []))
+    //   .catch(() => {});
     api
 
       .get("/car-purchases/get-all", { params: { page: 0, size: 1000 } })

@@ -16,6 +16,8 @@ import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 import ArticleIcon from "@mui/icons-material/Article";
 import PeopleIcon from "@mui/icons-material/People";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import QueryStatsIcon from "@mui/icons-material/QueryStats";
 
 const NAV = [
   { to: "/dashboard", label: "Dashboard", Icon: DashboardIcon },
@@ -24,6 +26,7 @@ const NAV = [
   { to: "/car-purchases", label: "Car Purchases", Icon: DirectionsCarIcon },
   { to: "/car-expenses", label: "Car Expenses", Icon: ReceiptLongIcon },
   { to: "/invoice", label: "Invoice", Icon: ArticleIcon },
+  { to: "/user-metrics", label: "User Metrics", Icon: QueryStatsIcon },
 ];
 
 export default function Sidebar({ open, drawerWidth }) {

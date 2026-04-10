@@ -60,7 +60,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     Promise.all([
-      api.get("/car-purchases/get-all", { params: { page: 0, size: 6 } }),
+      api.get("/car-purchases/get-all", { params: { page: 0, size: 10 } }),
 
       api.get("/car-expenses/get-all", { params: { page: 0, size: 100 } }),
     ])
@@ -127,7 +127,7 @@ export default function Dashboard() {
       </Typography>
 
       {/* Stat Cards */}
-      <Grid container spacing={2} mb={3}>
+      {/* <Grid container spacing={2} mb={3}>
         {stats.map((s) => (
           <Grid item xs={12} sm={6} md={3} key={s.label}>
             {loading ? (
@@ -141,7 +141,7 @@ export default function Dashboard() {
             )}
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
 
       {/* Recent Purchases Table */}
       <Card>
@@ -155,7 +155,7 @@ export default function Dashboard() {
             }}
           >
             <Typography variant="h6" fontWeight={600}>
-              Recent Car Purchases
+              Stock
             </Typography>
             <Button
               size="small"

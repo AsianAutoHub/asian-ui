@@ -69,10 +69,15 @@ export default function CarPurchaseForm() {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
+    // api
+    //   .get("/user/get-all")
+    //   .then((r) => setUsers(r.data.data || []))
+    //   .catch(() => {});
+
     api
-      .get("/user/get-all")
-      .then((r) => setUsers(r.data.data || []))
-      .catch(() => {});
+      .get("/user/get-all", { params: { page: 0, size: 100 } })
+      .then((r) => setUsers(r.data.data.content || []))
+      .catch((e) => toast.error(e.message));
 
     if (isEdit) {
       api
