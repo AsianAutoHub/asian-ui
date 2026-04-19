@@ -18,6 +18,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 import PeopleIcon from "@mui/icons-material/People";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
+import SummarizeIcon from "@mui/icons-material/Summarize";
 
 const NAV = [
   { to: "/dashboard", label: "Dashboard", Icon: DashboardIcon },
@@ -27,6 +28,7 @@ const NAV = [
   { to: "/car-expenses", label: "Car Expenses", Icon: ReceiptLongIcon },
   { to: "/invoice", label: "Invoice", Icon: ArticleIcon },
   { to: "/user-metrics", label: "User Metrics", Icon: QueryStatsIcon },
+  { to: "/monthly-statement", label: "Monthly Statement", Icon: SummarizeIcon },
 ];
 
 export default function Sidebar({ open, drawerWidth }) {
