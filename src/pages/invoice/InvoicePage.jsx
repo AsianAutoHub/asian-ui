@@ -383,8 +383,9 @@ export default function InvoicePage() {
             >
               {[
                 ["Purchase Amount", fmt(preview.purchaseAmount)],
-                ["Sale Amount", fmt(preview.saledAmount)],
+                
                 ["Total Expenses", fmt(preview.totalExpenseAmount)],
+                ["Sale Amount", fmt(preview.saledAmount)],
               ].map(([label, value]) => (
                 <Box
                   key={label}

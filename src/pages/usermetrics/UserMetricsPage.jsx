@@ -272,7 +272,7 @@ export default function UserMetricsPage() {
                   ],
                   // ["Net Expense (DR - CR)", fmt(metrics.netExpense), "#1300e6"],
                   [
-                    "Total Profit (CR - DR)",
+                    "Revenue",
                     fmt(metrics.netExpense),
                     "#1300e6",
                   ],

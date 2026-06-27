@@ -418,7 +418,7 @@ export default function MonthlyStatementPage() {
                           "Invested",
                           "DR (Out)",
                           "CR (In)",
-                          "Net Expense",
+                          "Revenue",
                           "Balance",
                         ].map((h) => (
                           <TableCell key={h}>{h}</TableCell>
